@@ -1,6 +1,8 @@
 const ToDolist = () => {
   return (
-    <div>ToDolist</div>
+    <div className="todo-container">
+
+    </div>
   )
 }
 
