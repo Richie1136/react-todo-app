@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Richie's Todo list</h1>
-      <Form />
+      <Form setInputText={setInputText} />
       <ToDolist />
     </div>
   );
