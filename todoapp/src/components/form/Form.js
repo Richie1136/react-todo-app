@@ -12,11 +12,12 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
       ...todos,
       { text: inputText, completed: false, id: uuid() }
     ])
+    setInputText('')
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <input onChange={handleInputText} className="todo-input" type='text' />
+      <input value={inputText} onChange={handleInputText} className="todo-input" type='text' />
       <button className="todo-button" type='submit'>
         <i className="fas fa-plus-square"></i>
       </button>
