@@ -1,12 +1,17 @@
-const Form = ({ setInputText }) => {
+import { v4 as uuid } from 'uuid'
+
+const Form = ({ setInputText, setTodos, todos, inputText }) => {
 
   const handleInputText = (event) => {
-    console.log(event.target.value)
     setInputText(event.target.value)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    setTodos([
+      ...todos,
+      { text: inputText, completed: false, id: uuid() }
+    ])
   }
 
   return (
