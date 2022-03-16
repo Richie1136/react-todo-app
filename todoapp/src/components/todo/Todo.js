@@ -1,6 +1,6 @@
 
 const Todo = ({ text, todo, todos, setTodos }) => {
-
+  console.log(todos)
   const handleDelete = () => {
     setTodos(todos.filter((el) => el.id !== todo.id))
   }
